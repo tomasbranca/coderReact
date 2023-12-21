@@ -1,0 +1,18 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    background-color: gray;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title{
+    color:blue;
+}
+img{
+    height: 50px;
+}
