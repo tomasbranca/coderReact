@@ -1,6 +1,5 @@
 import classes from "./NavBar.module.css";
 import CartWidget from "./CartWidget/CartWidget";
-
 const NavBar = () => {
   return (
     <nav>

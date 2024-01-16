@@ -7,15 +7,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <NavBar />
       <BrowserRouter>
-        <Page>
-          <Routes>
-            <Route path='/' element={<ItemListContainer />} />
-            <Route path='/category/:category' element={<ItemListContainer />} />
-            <Route path='*' element={<h1>404 Not Found</h1>} />
-          </Routes>
-        </Page>
+        <NavBar />
+          <Page>
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/category/:category' element={<ItemListContainer />} />
+              <Route path='*' element={<h1>404 Not Found</h1>} />
+            </Routes>
+          </Page>
       </BrowserRouter>
     </>
   );

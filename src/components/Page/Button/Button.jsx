@@ -2,7 +2,7 @@ import classes from "./Button.module.css"
 
 const Button = ({ children }) => {
     return (
-        <button className={classes.buttonPage} >{children}</button>
+        <button className={classes.buttonToPage} >{children}</button>
     )
 }
 
