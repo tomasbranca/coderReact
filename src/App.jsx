@@ -1,17 +1,24 @@
-
-import './App.css'
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListConatiner'
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import Page from "./components/Page/Page";
+import ItemListContainer from "./components/Page/ItemListContainer/ItemListConatiner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-
-
   return (
     <>
       <NavBar />
-      <ItemListContainer label={'Jordan 1'}/>
+      <BrowserRouter>
+        <Page>
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/category/:category' element={<ItemListContainer />} />
+            <Route path='*' element={<h1>404 Not Found</h1>} />
+          </Routes>
+        </Page>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

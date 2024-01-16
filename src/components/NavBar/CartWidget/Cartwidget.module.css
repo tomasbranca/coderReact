@@ -1,0 +1,16 @@
+.cart {
+  height: 70px;
+  justify-content: center;
+}
+.cart .cartImage {
+  display: flex;
+  justify-content: center;
+}
+.cart .cartImage img {
+  height: 40px;
+  filter: invert(100%);
+}
+.cart p {
+  font-size: 15px;
+  color: #ffffff;
+}

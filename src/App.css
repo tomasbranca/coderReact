@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Aquilone;
+  src: url("src/fonts/Aquilone Regular.otf");
+}
+* {
+  font-family: Aquilone;
+}
+body {
+  padding: 0;
+  margin: 0;
+}

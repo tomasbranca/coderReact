@@ -1,25 +1,24 @@
-import classes from './NavBar.module.css'
-import Button from './Button/Button'
-import CartWidget from './CartWidget/CartWidget'
+import classes from "./NavBar.module.css";
+import CartWidget from "./CartWidget/CartWidget";
 
 const NavBar = () => {
-    return (
-        <nav>
-            <div className={classes.main}>
-                <section>
-                    <h1 className={classes.title}>Barg Shoes</h1> 
-                    <h5 className={classes.title}>Tienda de zapatillas</h5>
-                </section>   
-                <section>
-                    <Button label={'Últimos Ingresos'} />
-                    <Button label={'Sneakers'} />
-                    <Button label={'Basketball'} />
-                    <Button label={'Running'} />
-                </section>
-            </div>
-            <CartWidget/>
-        </nav>
-    )
-}
+  return (
+    <nav>
+      <section className={classes.left}>
+          <img src="public\logo.png" alt="Logo de la página" />
+          <div>
+            <h1 className={classes.title}>Barg Shoes</h1>
+          </div>
+      </section>
+      <section className= {classes.right} >
+        <CartWidget />
+        <div className={classes.user} >
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/person-male.png" alt="person-male" />
+          <p>Ingresar Usuario</p>
+        </div>
+      </section>
+    </nav>
+  );
+};
 
-export default NavBar
+export default NavBar;
