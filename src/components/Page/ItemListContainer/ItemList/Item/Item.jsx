@@ -1,6 +1,6 @@
-import classes from "./Item.module.css";
-import ItemCount from "./ItemCount/ItemCount";
+import { classes } from "./Item.module.css";
 import { Link } from "react-router-dom";
+import { formatNumber } from "../../../../../context/CartContext";
 
 const Item = ({ id, brand, name, model, price, img }) => {
   return (
@@ -19,14 +19,7 @@ const Item = ({ id, brand, name, model, price, img }) => {
           <button className={classes.details}>
             <Link to={`/id/${id}`}>Detalles</Link>
           </button>
-          <ItemCount
-            initial={0}
-            stock={10}
-            onAdd={(quantity) => {
-              console.log("Cantidad agregada: ", quantity);
-            }}
-          />
-          <span className={classes.price}>${price}</span>
+          <span className={classes.price}>$ {formatNumber(price)}</span>
         </div>
       </section>
     </div>

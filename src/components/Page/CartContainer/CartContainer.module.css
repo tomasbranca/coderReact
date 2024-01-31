@@ -1,0 +1,55 @@
+.cartEmpty {
+  height: calc(100vh - 150px);
+  background-color: #f5e1ce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cartEmpty .option button {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: black;
+  cursor: pointer;
+}
+.cartContainer {
+  height: max-content;
+  background-color: #f5e1ce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cartPurchase {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #b08e6b;
+}
+.cartPurchase h3 {
+  font-size: 50px;
+  text-align: right;
+  margin-right: 50px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+.cartPurchase .cartButtons {
+  display: flex;
+  justify-content: right;
+  margin-right: 50px;
+  padding-bottom: 50px;
+}
+.buttonClear {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.buttonCheckout button {
+  font-size: 25px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: black;
+  cursor: pointer;
+}

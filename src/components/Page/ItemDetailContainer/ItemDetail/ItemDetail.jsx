@@ -1,6 +1,33 @@
-import classes from "./ItemDetail.module.css";
+import { classes } from "./ItemDetail.module.css";
+import { ItemCount } from "./ItemCount/ItemCount";
+import { CartContext, formatNumber } from "../../../../context/CartContext";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
-const ItemDetail = ({ id, brand, name, model, price, category, img }) => {
+const ItemDetail = ({
+  id,
+  brand,
+  name,
+  model,
+  price,
+  category,
+  img,
+  sizeStock,
+}) => {
+  const [quantityAdded, setQuantityAdded] = useState(0);
+  const { addItem } = useContext(CartContext);
+
+  const handleOnAdd = (quantity, selectedSize) => {
+    setQuantityAdded(quantity);
+    const item = {
+      id,
+      product: { brand, name, model },
+      size: selectedSize,
+      price,
+      img,
+    };
+    addItem(item, quantity);
+  };
   return (
     <div className={classes.itemDetail}>
       <div className={classes.itemCard}>
@@ -14,7 +41,7 @@ const ItemDetail = ({ id, brand, name, model, price, category, img }) => {
                 {brand} {name}
               </h1>
               <p className={classes.model}>{model}</p>
-              <p className={classes.price}>${price}</p>
+              <p className={classes.price}>${formatNumber(price)}</p>
             </div>
             <div className={classes.img}>
               <img src={img} />
@@ -38,6 +65,15 @@ const ItemDetail = ({ id, brand, name, model, price, category, img }) => {
                 placeat libero nam iusto earum eos quod voluptatibus unde velit.
                 Vel, iure illum.
               </p>
+              <div className={classes.count}>
+                {quantityAdded > 0 ? (
+                  <Link to="/cart" className="finishPurch">
+                    <button>Terminar compra!</button>
+                  </Link>
+                ) : (
+                  <ItemCount {...sizeStock} onAdd={handleOnAdd} />
+                )}
+              </div>
             </div>
           </div>
         </div>

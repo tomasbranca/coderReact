@@ -1,4 +1,5 @@
 .itemDetail {
+  background-color: #f5e1ce;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,8 +7,8 @@
 }
 
 .itemCard {
-  height: 900px;
-  width: 1000px;
+  height: auto;
+  width: auto;
   background-color: #ffffff;
   border: 5px solid black;
   box-shadow: 0 0 0 7px #ffffff, 0 0 8px 5px #000;
@@ -19,7 +20,7 @@
   padding: 30px 40px;
 }
 .itemCard .category h3 {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 600;
 }
 .itemCard .cardBody {
@@ -35,22 +36,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 .itemCard .cardBody .half .featuredText {
   margin: 0;
   padding: 0;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 55px;
 }
 .itemCard .cardBody .half .featuredText .model {
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 5px;
 }
 .itemCard .cardBody .half .featuredText .price {
-  font-size: 20px;
+  font-size: 30px;
 }
 .itemCard .cardBody .half .img {
   padding-top: 15px;
@@ -60,25 +61,34 @@
   max-width: 100%;
   height: auto;
 }
-.itemCard .cardBody .half .img .id {
-  position: absolute;
-}
+
 .itemCard.cardBody .half .img .id p {
   margin: 0;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 25px;
 }
 .itemCard.cardBody .half .img .id h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
 }
 .itemCard .cardBody .half .description {
   margin-bottom: 25px;
 }
 .itemCard .cardBody .half .description p {
-  margin: 0;
   font-weight: 300;
-  line-height: 27px;
-  font-size: 15px;
+  line-height: 25px;
+  font-size: 25px;
+}
+.itemCard .cardBody .half .description .count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.itemCard .cardBody .half .description .count a button {
+  font-size: 25px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: black;
 }

@@ -1,5 +1,5 @@
-import classes from "./Page.module.css";
-import Button from "./Button/Button";
+import { classes } from "./Page.module.css";
+import { Button } from "./Button/Button";
 import { Link } from "react-router-dom";
 
 const Page = ({ children }) => {

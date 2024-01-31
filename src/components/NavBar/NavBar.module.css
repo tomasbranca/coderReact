@@ -1,12 +1,13 @@
 nav {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   height: 100px;
   background-color: #7a5c3c;
   position: -webkit-sticky;
   position: sticky;
   top: 0%;
   bottom: 0%;
+  z-index: 10;
 }
 nav .left {
   display: flex;
@@ -19,26 +20,26 @@ nav .left div {
   flex-direction: column;
   justify-content: center;
 }
-nav .left div .title{
+nav .left div .title {
   font-family: Aquilone;
   font-size: 50px;
   color: #ffffff;
 }
-nav .right{
+nav .right {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   width: 240px;
 }
-nav .right .user{
+nav .right .user {
   display: flex;
-  align-items: center
+  align-items: center;
 }
-nav .right .user img{
+nav .right .user img {
   height: 30px;
   filter: invert(100%);
 }
-nav .right .user p{
+nav .right .user p {
   font-size: 20px;
   color: #ffffff;
 }

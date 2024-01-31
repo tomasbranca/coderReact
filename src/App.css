@@ -1,6 +1,6 @@
 @font-face {
   font-family: Aquilone;
-  src: url("src/fonts/Aquilone Regular.otf");
+  src: url("./fonts/Aquilone Regular.otf");
 }
 * {
   font-family: Aquilone;
