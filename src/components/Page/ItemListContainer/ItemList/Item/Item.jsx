@@ -1,4 +1,4 @@
-import { classes } from "./Item.module.css";
+import classes from "./Item.module.css";
 import { Link } from "react-router-dom";
 import { formatNumber } from "../../../../../context/CartContext";
 

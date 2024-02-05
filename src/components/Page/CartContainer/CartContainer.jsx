@@ -1,11 +1,11 @@
-import { classes } from "./CartContainer.module.css";
-import { CartItem } from "./CartItem/CartItem";
+import classes from "./CartContainer.module.css";
+import CartItem from "./CartItem/CartItem";
 import { CartContext, formatNumber } from "../../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const CartContainer = () => {
-  const { cart, clearCart, totalQuantity, totalAmmount } =
+  const { cart, clearCart, totalQuantity, totalAmount } =
     useContext(CartContext);
 
   if (totalQuantity === 0) {
@@ -28,7 +28,7 @@ const CartContainer = () => {
         <CartItem key={prod.id} {...prod} />
       ))}
       <div className={classes.cartPurchase}>
-        <h3>Total: ${formatNumber(totalAmmount)}</h3>
+        <h3>Total: ${formatNumber(totalAmount)}</h3>
         <div className={classes.cartButtons}>
           <button onClick={() => clearCart()} className={classes.buttonClear}>
             Limpiar Carrito

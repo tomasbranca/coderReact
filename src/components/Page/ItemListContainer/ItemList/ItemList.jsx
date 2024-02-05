@@ -1,4 +1,4 @@
-import { Item } from "./Item/Item";
+import Item from "./Item/Item";
 
 const itemList = ({ products }) => {
   return products.map((prod) => {

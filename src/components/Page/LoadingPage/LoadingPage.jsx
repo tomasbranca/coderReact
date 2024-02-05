@@ -1,4 +1,4 @@
-import { classes } from "./LoadingPage.module.css";
+import classes from "./LoadingPage.module.css";
 
 const LoadingPage = () => {
   return (

@@ -32,7 +32,7 @@
   line-height: 1;
   margin: 0;
 }
-.itemCard .subdescription .remove {
+.itemCard .sub .remove {
   text-align: right;
   text-decoration: underline;
   color: #7a5c3c;

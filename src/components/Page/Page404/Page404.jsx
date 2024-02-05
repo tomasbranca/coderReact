@@ -1,4 +1,4 @@
-import { classes } from "./Page404.module.css";
+import classes from "./Page404.module.css";
 import { Link } from "react-router-dom";
 
 const Page404 = () => {

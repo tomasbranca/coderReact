@@ -1,4 +1,4 @@
-import { classes } from "./CartItem.module.css";
+import classes from "./CartItem.module.css";
 import { CartContext, formatNumber } from "../../../../context/CartContext";
 import { useContext } from "react";
 
@@ -14,7 +14,7 @@ const CartItem = (item) => {
           {item.product.brand} {item.product.name}
         </h1>
         <h2 className={classes.model}>{item.product.model}</h2>
-        <div className={classes.subdescription}>
+        <div className={classes.sub}>
           <p>Talle: {item.size}</p>
           <p>Precio: ${formatNumber(item.price)}</p>
           <p>Cantidad: {item.quantity}</p>

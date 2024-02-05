@@ -1,5 +1,5 @@
-import { classes } from "./ItemDetail.module.css";
-import { ItemCount } from "./ItemCount/ItemCount";
+import classes from "./ItemDetail.module.css";
+import ItemCount from "./ItemCount/ItemCount";
 import { CartContext, formatNumber } from "../../../../context/CartContext";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
@@ -19,14 +19,21 @@ const ItemDetail = ({
 
   const handleOnAdd = (quantity, selectedSize) => {
     setQuantityAdded(quantity);
-    const item = {
-      id,
-      product: { brand, name, model },
-      size: selectedSize,
-      price,
-      img,
-    };
-    addItem(item, quantity);
+
+    if (sizeStock && sizeStock[selectedSize] !== undefined) {
+      const stockForSelectedSize = sizeStock[selectedSize];
+      const item = {
+        id,
+        product: { brand, name, model },
+        size: selectedSize,
+        price,
+        img,
+        stock: stockForSelectedSize,
+      };
+      addItem(item, quantity);
+    } else {
+      console.error(`El stock para el talle ${selectedSize} no está definido.`);
+    }
   };
   return (
     <div className={classes.itemDetail}>

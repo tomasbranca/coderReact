@@ -1,0 +1,8 @@
+.checkoutPage{
+    height: 100vh;
+    background-color: #f5e1ce;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

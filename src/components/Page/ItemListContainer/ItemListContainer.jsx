@@ -1,7 +1,7 @@
-import { classes } from "./ItemListContainer.module.css";
-import { ItemList } from "./ItemList/ItemList";
-import { Page404 } from "../Page404/Page404";
-import { LoadingPage } from "../LoadingPage/LoadingPage";
+import classes from "./ItemListContainer.module.css";
+import ItemList from "./ItemList/ItemList";
+import Page404 from "../Page404/Page404";
+import LoadingPage from "../LoadingPage/LoadingPage";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../../services/firebase/firebaseConfig";

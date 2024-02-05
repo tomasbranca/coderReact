@@ -1,4 +1,4 @@
-import { classes } from "./ItemCount.module.css";
+import classes from "./ItemCount.module.css";
 import { useState } from "react";
 
 const ItemCount = ({ onAdd, ...sizeStock }) => {
@@ -55,7 +55,7 @@ const ItemCount = ({ onAdd, ...sizeStock }) => {
                   key={size}
                   onClick={() => selectSize(size)}
                   className={`${classes.sizeItem} ${
-                    selectedSize === size ? classes.selectedsize : ""
+                    selectedSize === size ? classes.selectedSize : ""
                   }`}
                 >
                   {size}
