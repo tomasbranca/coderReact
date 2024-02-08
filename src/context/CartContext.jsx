@@ -8,16 +8,18 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addItem = (item, quantity) => {
-    const existingItem = cart.find(prod => prod.id === item.id && prod.size === item.size);
-  
+    const existingItem = cart.find(
+      (prod) => prod.id === item.id && prod.size === item.size
+    );
+
     if (!existingItem) {
-      setCart(prev => [...prev, { ...item, quantity }]);
+      setCart((prev) => [...prev, { ...item, quantity }]);
     } else {
-      const cartUpdated = cart.map(prod => {
+      const cartUpdated = cart.map((prod) => {
         if (prod.id === item.id && prod.size === item.size) {
           return {
             ...prod,
-            quantity: quantity
+            quantity: quantity,
           };
         } else {
           return prod;
@@ -27,8 +29,13 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const removeItem = (itemId) => {
-    const cartUpdated = cart.filter((prod) => prod.id !== itemId);
+  const removeItem = (itemId, size) => {
+    const cartUpdated = cart.filter((prod) => {
+      if (prod.id === itemId && prod.size !== size) {
+        return true;
+      }
+      return prod.id !== itemId || prod.size !== size;
+    });
     setCart(cartUpdated);
   };
 

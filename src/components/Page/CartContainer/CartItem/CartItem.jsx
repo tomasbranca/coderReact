@@ -18,7 +18,7 @@ const CartItem = (item) => {
           <p>Talle: {item.size}</p>
           <p>Precio: ${formatNumber(item.price)}</p>
           <p>Cantidad: {item.quantity}</p>
-          <p className={classes.remove} onClick={() => removeItem(item.id)}>
+          <p className={classes.remove} onClick={() => removeItem(item.id, item.size)}>
             Eliminar
           </p>
         </div>
