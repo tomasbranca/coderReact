@@ -1,5 +1,6 @@
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
+import OrderPage from "../OrderPage/OrderPage";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import { useState } from "react";
 import { useCart } from "../../../context/CartContext";
@@ -101,11 +102,11 @@ const Checkout = () => {
     return <LoadingPage />;
   }
   if (orderId) {
-    return <h1>El id de su producto es: {orderId}</h1>;
+    return <OrderPage order={orderId} />;
   }
 
   return (
-    <div className={classes.checkoutPage} >
+    <div className={classes.checkoutPage}>
       <h1>Checkout</h1>
       <CheckoutForm onConfirm={createOrder} />
     </div>

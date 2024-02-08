@@ -1,0 +1,17 @@
+.orderPage {
+  height: calc(100vh - 150px);
+  background-color: #f5e1ce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orderPage img {
+  width: 15%;
+}
+.orderPage .option button {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: black;
+  cursor: pointer;
+}

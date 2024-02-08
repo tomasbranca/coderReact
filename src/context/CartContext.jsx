@@ -8,10 +8,22 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addItem = (item, quantity) => {
-    if (!isInCart(item.id)) {
-      setCart((prev) => [...prev, { ...item, quantity }]);
+    const existingItem = cart.find(prod => prod.id === item.id && prod.size === item.size);
+  
+    if (!existingItem) {
+      setCart(prev => [...prev, { ...item, quantity }]);
     } else {
-      console.error("El producto ya fue agregado");
+      const cartUpdated = cart.map(prod => {
+        if (prod.id === item.id && prod.size === item.size) {
+          return {
+            ...prod,
+            quantity: quantity
+          };
+        } else {
+          return prod;
+        }
+      });
+      setCart(cartUpdated);
     }
   };
 

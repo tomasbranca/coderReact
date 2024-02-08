@@ -39,6 +39,7 @@ const CheckoutForm = ({ onConfirm }) => {
       address: formValues.address,
       city: formValues.city,
       zip: formValues.zip,
+      selectedCard: formValues.selectedCard,
       cardName: formValues.cardName,
       cardNumber: formValues.cardNumber,
       expDate: formValues.expDate,
@@ -114,25 +115,37 @@ const CheckoutForm = ({ onConfirm }) => {
             <h3>Método de pago</h3>
             <label htmlFor="cards">Elige tarjeta</label>
             <div className={classes.cardsContainer}>
-              <button className={classes.cardButton} onClick={() => handleCardSelect("visa")}>
+              <button
+                className={classes.cardButton}
+                onClick={() => handleCardSelect("visa")}
+              >
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/020/975/572/original/visa-logo-visa-icon-transparent-free-png.png"
                   alt=""
                 />
               </button>
-              <button className={classes.cardButton} onClick={() => handleCardSelect("mastercard")}>
+              <button
+                className={classes.cardButton}
+                onClick={() => handleCardSelect("mastercard")}
+              >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
                   alt=""
                 />
               </button>
-              <button className={classes.cardButton} onClick={() => handleCardSelect("amex")}>
+              <button
+                className={classes.cardButton}
+                onClick={() => handleCardSelect("amex")}
+              >
                 <img
                   src="https://1000marcas.net/wp-content/uploads/2020/03/logo-American-Express.png"
                   alt=""
                 />
               </button>
-              <button className={classes.cardButton} onClick={() => handleCardSelect("discover")}>
+              <button
+                className={classes.cardButton}
+                onClick={() => handleCardSelect("discover")}
+              >
                 <img
                   src="https://stanfordproofreading.com/wp-content/uploads/2021/02/atm-card-credit-card-debit-card-discover-icon-discover-card-png-512_512.png"
                   alt=""
