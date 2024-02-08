@@ -1,4 +1,4 @@
-import classes from "./CartWidget.module.css";
+import classes from "./CartWidget.module.css"
 import { CartContext } from "../../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
